@@ -55,7 +55,7 @@ function CardContent() {
 
         <div className="absolute top-64 left-[740px]">
           <button
-            className="bg-NeonGreen p-4 rounded-full hover:shadow-sm"
+            className="bg-NeonGreen p-4 rounded-full hover:shadow-buttonShadow"
             onClick={() => randomAdviceNumber()}
           >
             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
