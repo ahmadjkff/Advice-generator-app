@@ -3,7 +3,7 @@ import Card from "./components/Card";
 
 function App() {
   return (
-    <div className="container h-full bg-DarkBlue font-manrope-800 align-middle justify-center flex ">
+    <div className="container flex h-full bg-DarkBlue font-manrope-800 align-middle justify-center items-center ">
       <Card />
     </div>
   );

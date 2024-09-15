@@ -1,14 +1,18 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function CardContent() {
   const [adviceNumber, setAdviceNumber] = useState(undefined);
   let [advice, setAdvice] = useState("Press the Dice to generate an adivce");
 
   function randomAdviceNumber(min = 1, max = 224) {
+    setAdvice("Loading...");
     const newAdviceNumber = Math.floor(Math.random() * (max - min + 1)) + min;
     setAdviceNumber(Number(newAdviceNumber));
   }
+
+  useEffect(() => {
+    randomAdviceNumber();
+  }, []);
 
   useEffect(() => {
     const fetchAdvice = async () => {
@@ -36,7 +40,7 @@ function CardContent() {
             "{advice}"
           </h4>
 
-          <p className="">
+          <p className="pb-24">
             <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fillRule="evenodd">
                 <path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z" />
@@ -48,9 +52,10 @@ function CardContent() {
             </svg>
           </p>
         </div>
+
         <div className="absolute top-64 left-[740px]">
           <button
-            className="bg-NeonGreen p-4 rounded-full"
+            className="bg-NeonGreen p-4 rounded-full hover:shadow-buttonShadow"
             onClick={() => randomAdviceNumber()}
           >
             <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
