@@ -13,6 +13,9 @@ export default {
       fontFamily: {
         manrope: "manrope",
       },
+      boxShadow: {
+        buttonShadow: "2px 2px 15px 5px  hsl(150,100%,66%,0.5)",
+      },
     },
   },
   plugins: [],
