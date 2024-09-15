@@ -14,7 +14,7 @@ export default {
         manrope: "manrope",
       },
       boxShadow: {
-        buttonShadow: "4px 2px 15px 5px  hsl(150,100%,66%,0.5)",
+        buttonShadow: "2px 2px 15px 5px  hsl(150,100%,66%,0.5)",
       },
     },
   },
