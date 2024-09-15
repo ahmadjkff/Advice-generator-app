@@ -25,6 +25,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Clear GitHub Actions Cache
+        run: sudo rm -rf $GITHUB_WORKSPACE/.cache
+
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3 # Updated to v3
         with:
